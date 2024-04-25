@@ -29,7 +29,7 @@ function mousePressed() { // needed to get it to work in full screen mode
 }
 
 function setup() {
-   createCanvas(750, 600);
+   createCanvas(windowWidth, windowHeight-350);
   colorMode(HSB, 100);
   
   createDiv().style('height', '8px');
@@ -59,7 +59,23 @@ function setup() {
   // Start randomization initially
   startRandomization();
 }
-
+function draw() {
+  if (mouseIsPressed == true && splash.update() == true) {
+    mode = 1;
+  }
+  if (mode == 1) {
+    splash.hide();}
+  
+  background(100);
+  
+  translate(width/2, height/2);
+  switch(Geometry.sideCount) {
+    case 3: drawTriangleGrid(); break;
+    case 4: drawSquareGrid(); break;
+    case 6: drawHexagonGrid(); break;
+    
+  }
+}
 function startRandomization() {
   randomizeInterval = setInterval(randomizeSliders, 500); // Randomize every half a second
 }
@@ -80,23 +96,7 @@ function randomizeSliders() {
   GeometryAlphAngle.slider.value(random(GeometryAlphAngle.slider.elt.min, GeometryAlphAngle.slider.elt.max));
 }
 
-function draw() {
-   if (mouseIsPressed == true) {
-    mode = 1;
-  }
-  if (mode == 1) {
-    splash.hide();}
-  
-  background(100);
-  
-  translate(width/2, height/2);
-  switch(Geometry.sideCount) {
-    case 3: drawTriangleGrid(); break;
-    case 4: drawSquareGrid(); break;
-    case 6: drawHexagonGrid(); break;
-    
-  }
-}
+
 
 function reset() {
   let n = Sides.value();
