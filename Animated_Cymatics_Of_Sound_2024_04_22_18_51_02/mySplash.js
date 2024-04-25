@@ -22,7 +22,7 @@ class Splash {
     this.name = createDiv("FAISAL ALETANI");
     this.name.position(this.splashBorder + 700, this.splashBorder + 60);
 
-    this.info = createDiv("This project is dedicated to present the Arabic school of ART and GEOMETRY using an interactive geometry designer  which be used to imagine the cymatic representation of the Arabic music modes which is refered to as maqamat, once you click on the this splash page a 90 second music Taqsim,,, file will be played in the background which will consist use the the sliders below the canvas to adjust the geomytry shape based on the maqam you choose to explore.<p> <a href=https://editor.p5js.org/bcjacobs/sketches/IhHSvjyZJ>view code</a>");
+    this.info = createDiv("This project is dedicated to present the Arabic school of ART and GEOMETRY using an interactive geometry designer  which be used to imagine the cymatic representation of the Arabic music modes which is refered to as maqamat, once you click on the this splash page a 90 second music Taqsim,,, file will be played in the background which will consist use the the sliders below the canvas to adjust the geomytry shape based on the maqam you choose to explore.<p> <a href=https://editor.p5js.org/faisalfreezy/sketches/QckP5cAWp>view code</a>");
     this.info.position(this.splashBorder + 550, this.splashBorder + 100);
     this.info.size(500, 100); // Adjust width and height as needed
 
