@@ -4,7 +4,7 @@ class Splash {
 
     this.backgroundRect = createDiv('');
     this.backgroundRect.position(this.splashBorder+500, this.splashBorder);
-    this.backgroundRect.size(550, 450); 
+    this.backgroundRect.size(550, 550); 
     this.backgroundRect.style('background-color', '#8BC34A');
 
     fill(0, 0, 222);
